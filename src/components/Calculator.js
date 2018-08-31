@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import firebase from "./firebase";
+import firebase from "./../firebase";
 
 //*****
 // check if first button clicked is an operator
@@ -11,11 +11,12 @@ import firebase from "./firebase";
 // allwo to be first character in equation 
 // if its not then it has to after an operator 
 // equal number of opening and closing ()
-// const dbRef = firebase.database().ref();
+// const dbRef = firebase.database().ref(); 
 
 const dbRef = firebase.database().ref();
 
 class Calculator extends Component {    
+    
     constructor(){
         super();
         this.state = {
