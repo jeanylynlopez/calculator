@@ -131,6 +131,18 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+i {
+  font-family: 'Font Awesome\ 5 Free';
+  color: #2a2a2a;
+  font-weight: 900;
+  line-height: 32px; }
+
+i {
+  font-family: 'Font Awesome\ 5 Free';
+  color: #2a2a2a;
+  font-weight: 400;
+  line-height: 32px; }
+
 .wrapper {
   width: 300px;
   margin: 0 auto; }
@@ -143,14 +155,15 @@ form {
     text-align: right;
     margin-top: 25px;
     width: 80%; }
-    form input .equation {
-      border-bottom: none;
-      border: 1px solid black; }
-    form input .value {
-      border-top: none;
-      border: 1px solid black; }
   form button {
     width: 25%; }
+
+.equation {
+  border-bottom: none; }
+
+.value {
+  border-top: none;
+  margin-top: -20px; }
 
 .buttonsContainer {
   width: 80%;
@@ -160,3 +173,8 @@ form {
 
 .historyTitle {
   text-align: center; }
+
+ul {
+  list-style: none;
+  margin-left: -10px;
+  text-align: left; }

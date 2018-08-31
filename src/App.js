@@ -14,7 +14,7 @@ import History from "./components/History"
 const dbRef = firebase.database().ref(); 
 
 class App extends Component {
-  
+
   constructor(){
     super();
     this.state = {
@@ -32,7 +32,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App wrapper">
         <Calculator /> 
         <History fullEquation={this.state.equation} />
       </div>

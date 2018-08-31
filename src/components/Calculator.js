@@ -1,5 +1,13 @@
 import React, { Component } from "react";
+import flip from './../syncAltSolid.svg';
+import ellipsis from './../ellipsisHSolid.scg';
 import firebase from "./../firebase";
+// import logo from './logo.svg';
+
+
+// import ReactDOM from 'react-dom';
+// import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+// import { faCoffee } from '@fortawesome/fontawesome-free-solid'
 
 //*****
 // check if first button clicked is an operator
@@ -16,7 +24,7 @@ import firebase from "./../firebase";
 const dbRef = firebase.database().ref();
 
 class Calculator extends Component {    
-    
+
     constructor(){
         super();
         this.state = {
@@ -26,6 +34,10 @@ class Calculator extends Component {
             operatorSelected: false,
         };
     }
+
+    // componentDidMount(){
+    //     this.nameInput.focus(); 
+    // }
      
     handleClickNum = (e) => {
         e.preventDefault();
@@ -77,12 +89,12 @@ class Calculator extends Component {
     render(){            
         return(
             <div>
-                <form className="wrapper" onSubmit={this.formSubmit}>
-                    <input type="text" placeholder={this.state.equation} className="equation"/>
+                <form onSubmit={this.formSubmit}>
+                    <input row="2" placeholder={`${this.state.equation}`} className="equation"/>
                     <input type="text" placeholder={this.state.value} className="value"/>
                     <div className="buttonsContainer">
-                        <button></button>
-                        <button></button>
+                        <button><img src={ellipsis} alt=""/></button>
+                        <button><i class="fas fa-sync-alt"></i></button>
                         <button></button>
                         <button value="clear" onClick={this.handleClickClear}>ce</button>
                     </div>
@@ -121,3 +133,4 @@ class Calculator extends Component {
 }
 
 export default Calculator;
+// ReactDOM.render(element, document.body);
