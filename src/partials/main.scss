@@ -2,17 +2,6 @@
 @import "_utils.scss";
 @import "_typography.scss";
 
-// ===============
-// TYPOGRAPHY 
-// ===============
-
-i {
-    font-family: 'Font Awesome\ 5 Free';
-    color: #2a2a2a;
-    font-weight: 400;
-    line-height: 32px;
-}
-
 .wrapper {
     width: 300px;
     margin: 0 auto;
@@ -21,6 +10,10 @@ i {
 // ===============
 // CALCULATOR
 // ===============
+
+img {
+    width: 30%;
+}
 
 form {
     margin-top: 25px;

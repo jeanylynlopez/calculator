@@ -137,15 +137,12 @@ i {
   font-weight: 900;
   line-height: 32px; }
 
-i {
-  font-family: 'Font Awesome\ 5 Free';
-  color: #2a2a2a;
-  font-weight: 400;
-  line-height: 32px; }
-
 .wrapper {
   width: 300px;
   margin: 0 auto; }
+
+img {
+  width: 30%; }
 
 form {
   margin-top: 25px;

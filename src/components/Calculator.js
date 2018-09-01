@@ -1,13 +1,10 @@
 import React, { Component } from "react";
 import flip from './../syncAltSolid.svg';
-import ellipsis from './../ellipsisHSolid.scg';
+import ellipsis from './../ellipsisHSolid.svg';
 import firebase from "./../firebase";
-// import logo from './logo.svg';
 
-
-// import ReactDOM from 'react-dom';
-// import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-// import { faCoffee } from '@fortawesome/fontawesome-free-solid'
+//*****
+// figure out the buttons to turn the calculator around and to show the history 
 
 //*****
 // check if first button clicked is an operator
@@ -32,6 +29,7 @@ class Calculator extends Component {
             value:"",
             operator:"",
             operatorSelected: false,
+            historySelected: false,
         };
     }
 
@@ -86,6 +84,36 @@ class Calculator extends Component {
         })
     }
 
+    // when I click ... I want the history to show up 
+    // should toggle can close and open 
+    toggleHistory = (e) => {
+        e.preventDefault();
+
+        let showHistory;
+        // if (this.state.operatorSelected === false) {
+        //     newEquation = this.state.equation + clickedOperator;
+        // } else if (this.state.operatorSelected === true) {
+        //     newEquation = this.state.equation.slice(0, -1) + clickedOperator;
+        // }
+        // if (this.state.operatorSelected === false){
+
+        // }
+        // have to be able to toggle 
+        // look at the toDoForm, probably the sameish concept 
+        this.setState({
+            historySelected: true
+        })
+
+    }
+
+    handleClickTurn = (e) => {
+        e.preventDefault();
+    }
+
+    handleClickBlank = (e) => {
+        e.preventDefault();
+    }
+
     render(){            
         return(
             <div>
@@ -93,9 +121,9 @@ class Calculator extends Component {
                     <input row="2" placeholder={`${this.state.equation}`} className="equation"/>
                     <input type="text" placeholder={this.state.value} className="value"/>
                     <div className="buttonsContainer">
-                        <button><img src={ellipsis} alt=""/></button>
-                        <button><i class="fas fa-sync-alt"></i></button>
-                        <button></button>
+                        <button onClick={this.handleClickTurn}><img src={flip} alt=""/></button>
+                        <button onClick={this.toggleComplete} className={this.state.historySelected}><img src={ellipsis} alt=""/></button>
+                        <button onClick={this.handleClickBlank}></button>
                         <button value="clear" onClick={this.handleClickClear}>ce</button>
                     </div>
 
