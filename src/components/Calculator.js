@@ -29,13 +29,11 @@ class Calculator extends Component {
             value:"",
             operator:"",
             operatorSelected: false,
-            historySelected: false,
+            // historySelected: false,
+            // historyClass: ""
+
         };
     }
-
-    // componentDidMount(){
-    //     this.nameInput.focus(); 
-    // }
      
     handleClickNum = (e) => {
         e.preventDefault();
@@ -63,7 +61,6 @@ class Calculator extends Component {
         })        
     }
 
-    // STRETCH GOAL: make the numbers disappear one at a time 
     handleClickClear = (e) => {
         e.preventDefault();
         this.setState({
@@ -84,75 +81,55 @@ class Calculator extends Component {
         })
     }
 
-    // when I click ... I want the history to show up 
-    // should toggle can close and open 
-    toggleHistory = (e) => {
-        e.preventDefault();
-
-        let showHistory;
-        // if (this.state.operatorSelected === false) {
-        //     newEquation = this.state.equation + clickedOperator;
-        // } else if (this.state.operatorSelected === true) {
-        //     newEquation = this.state.equation.slice(0, -1) + clickedOperator;
-        // }
-        // if (this.state.operatorSelected === false){
-
-        // }
-        // have to be able to toggle 
-        // look at the toDoForm, probably the sameish concept 
-        this.setState({
-            historySelected: true
-        })
-
-    }
-
     handleClickTurn = (e) => {
         e.preventDefault();
     }
 
     handleClickBlank = (e) => {
         e.preventDefault();
+        console.log("clicked")
     }
 
     render(){            
         return(
-            <div>
+            <div className={this.props.flipClass}>
                 <form onSubmit={this.formSubmit}>
                     <input row="2" placeholder={`${this.state.equation}`} className="equation"/>
                     <input type="text" placeholder={this.state.value} className="value"/>
+
                     <div className="buttonsContainer">
-                        <button onClick={this.handleClickTurn}><img src={flip} alt=""/></button>
-                        <button onClick={this.toggleComplete} className={this.state.historySelected}><img src={ellipsis} alt=""/></button>
-                        <button onClick={this.handleClickBlank}></button>
-                        <button value="clear" onClick={this.handleClickClear}>ce</button>
+                        <button className="blankButton" onClick={this.handleClickBlank}></button>
+                        <button className="blankButton" onClick={this.handleClickBlank}></button>
+                        <button className="blankButton" onClick={this.handleClickBlank}></button>
+                        <button className="clearButton" value="clear" onClick={this.handleClickClear}>ce</button>
                     </div>
 
                     <div className="buttonsContainer">
                         <button value="7" onClick={this.handleClickNum}>7</button>
                         <button value="8" onClick={this.handleClickNum}>8</button>
                         <button value="9" onClick={this.handleClickNum}>9</button>
-                        <button value="/" onClick={this.handleClickOperator}>/</button>
+                        <button className="operatorButton" value="/" onClick={this.handleClickOperator}>/</button>
                     </div>
 
                     <div className="buttonsContainer">
                         <button value="4" onClick={this.handleClickNum}>4</button>
                         <button value="5" onClick={this.handleClickNum}>5</button>
                         <button value="6" onClick={this.handleClickNum}>6</button>
-                        <button value="*" onClick={this.handleClickOperator}>x</button>
+                        <button className="operatorButton" value="*" onClick={this.handleClickOperator}>x</button>
                     </div>
 
                     <div className="buttonsContainer">
                         <button value="1" onClick={this.handleClickNum}>1</button>
                         <button value="2" onClick={this.handleClickNum}>2</button>
                         <button value="3" onClick={this.handleClickNum}>3</button>
-                        <button value="-" onClick={this.handleClickOperator}>-</button>
+                        <button className="operatorButton" value="-" onClick={this.handleClickOperator}>-</button>
                     </div>
 
                     <div className="buttonsContainer">
                         <button value="0" onClick={this.handleClickNum}>0</button>
                         <button value="." onClick={this.handleClickNum}>.</button>
                         <button type="submit" value="=">=</button>
-                        <button value="+" onClick={this.handleClickOperator}>+</button>
+                        <button className="operatorButton" value="+" onClick={this.handleClickOperator}>+</button>
                     </div>
                 </form>
             </div>

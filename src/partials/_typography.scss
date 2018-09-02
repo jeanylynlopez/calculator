@@ -1,6 +1,12 @@
-i {
-    font-family: 'Font Awesome\ 5 Free';
-    color: #2a2a2a;
-    font-weight: 900;
-    line-height: 32px;
+html {
+    font-size: 62.5%;
+}
+
+button, input, ul {
+    font-family: "Marvel", sans-serif;
+    font-size: 2rem;
+}
+
+button {
+    font-weight: bold;
 }

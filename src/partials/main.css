@@ -131,36 +131,65 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-i {
-  font-family: 'Font Awesome\ 5 Free';
-  color: #2a2a2a;
-  font-weight: 900;
-  line-height: 32px; }
+html {
+  font-size: 62.5%; }
+
+button, input, ul {
+  font-family: "Marvel", sans-serif;
+  font-size: 2rem; }
+
+button {
+  font-weight: bold; }
 
 .wrapper {
   width: 300px;
   margin: 0 auto; }
+  @media (min-width: 620px) {
+    .wrapper {
+      width: 600px; } }
+
+.toggleButton {
+  margin: 0 auto;
+  height: 35px;
+  display: flex;
+  justify-content: center; }
+  .toggleButton img {
+    margin-top: 5px;
+    width: 20%; }
+    @media (min-width: 620px) {
+      .toggleButton img {
+        width: 10%; } }
+
+.ellipsisButton, .flipButton {
+  width: 40%; }
+
+.transition {
+  transform: rotate(180deg); }
 
 img {
   width: 30%; }
 
 form {
-  margin-top: 25px;
+  margin-top: 50px;
   text-align: center; }
   form input {
     margin: 0 auto;
     text-align: right;
-    margin-top: 25px;
     width: 80%; }
   form button {
     width: 25%; }
+
+button:hover {
+  background-color: white; }
+
+.clearButton, .operatorButton {
+  background-color: darkgrey; }
 
 .equation {
   border-bottom: none; }
 
 .value {
-  border-top: none;
-  margin-top: -20px; }
+  border-top: none; }
 
 .buttonsContainer {
   width: 80%;
@@ -168,10 +197,31 @@ form {
   justify-content: space-between;
   margin: 0 auto; }
 
-.historyTitle {
-  text-align: center; }
+.relative {
+  position: relative; }
+
+.history {
+  position: absolute;
+  height: 85%;
+  width: 90%;
+  top: -20px;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  overflow: hidden;
+  overflow-y: scroll; }
+  @media (min-width: 620px) {
+    .history {
+      margin-left: 24px;
+      width: 86%; } }
+
+.hide {
+  display: none; }
 
 ul {
   list-style: none;
-  margin-left: -10px;
   text-align: left; }
+  ul li {
+    padding: 5px 0px 0px 2px; }
+    @media (min-width: 620px) {
+      ul li {
+        padding: 10px 0px 0 10px; } }

@@ -2,31 +2,73 @@
 @import "_utils.scss";
 @import "_typography.scss";
 
+// ===============
+// APP
+// ===============
+
 .wrapper {
     width: 300px;
     margin: 0 auto;
+    @include breakPoint(medium){
+        width: 600px;
+    }
+}
+
+.toggleButton {
+    margin: 0 auto;
+    // width: 50%;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    img {
+        margin-top: 5px;
+        width: 20%;
+        @include breakPoint(medium){
+            width: 10%;
+        }
+    }
+}
+
+.ellipsisButton, .flipButton {
+    width: 40%;
 }
 
 // ===============
 // CALCULATOR
 // ===============
 
+.transition {
+    transform: rotate(180deg);
+    // margin-top: 25px;
+    
+}
+
 img {
     width: 30%;
 }
 
 form {
-    margin-top: 25px;
+    margin-top: 50px;
     text-align: center;
     input {
         margin: 0 auto;
+        // margin-top: -10px;
+        // height: 50px;
         text-align: right;
-        margin-top: 25px; 
+        // margin-top: 25px; 
         width: 80%;
     }
     button {
         width: 25%;
     }
+}
+
+button:hover {
+   background-color: white; 
+}
+
+.clearButton, .operatorButton {
+    background-color: darkgrey;
 }
 
 .equation {
@@ -35,7 +77,6 @@ form {
 
 .value {
     border-top: none;
-    margin-top: -20px
 }
 
 .buttonsContainer {
@@ -49,15 +90,46 @@ form {
 // HISTORY 
 // ===============
 
-.historyTitle {
-    text-align: center;
+.relative {
+    position: relative;
+}
+
+.history {
+    position: absolute;
+    height: 85%;
+    width: 90%;
+    top: -20px;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    overflow: hidden;
+    overflow-y: scroll;
+    @include breakPoint(medium){
+        margin-left: 24px;
+        width: 86%;
+    }
+    // overflow-x: hidden;
+    // z-index: -1;
+}
+
+.hide {
+    display: none;
 }
 
 ul {
     list-style: none;
-    margin-left: -10px;
+    // margin-left: -10px;
     text-align: left;
+    // padding-right: 15px;
+    // padding: 5px 0;
+    li {
+        padding: 5px 0px 0px 2px;
+        @include breakPoint(medium){
+            padding: 10px 0px 0 10px;
+        }
+    }
 }
+
+
 
 
 
