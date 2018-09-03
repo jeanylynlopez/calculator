@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html lang="en" class="gr__localhost"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <link href="./React App_files/css" rel="stylesheet">
+    <link rel="shortcut icon" href="http://localhost:3000/favicon.ico">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  <style type="text/css">body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+</style><style type="text/css">article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden] {
+  display: none; }
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:active, a:hover {
+  outline: 0; }
+
+h1 {
+  font-size: 2em; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: 700; }
+
+dfn {
+  font-style: italic; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+q {
+  quotes: \201C \201D \2018 \2019; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -.5em; }
+
+sub {
+  bottom: -.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em; }
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0; }
+
+button, input {
+  line-height: normal; }
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled], input[disabled] {
+  cursor: default; }
+
+input[type=checkbox], input[type=radio] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0; }
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body, figure {
+  margin: 0; }
+
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: '';
+  clear: both;
+  height: 0; }
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+button, input, ul, h1 {
+  font-family: "Marvel", sans-serif;
+  font-size: 2rem; }
+
+h1 {
+  font-size: 4rem;
+  font-weight: bold; }
+
+button {
+  font-weight: bold; }
+
+.wrapper {
+  width: 300px;
+  margin: 0 auto; }
+  @media (min-width: 620px) {
+    .wrapper {
+      width: 600px; } }
+
+.title {
+  text-align: center;
+  margin-bottom: 10px; }
+
+.toggleButton {
+  margin: 0 auto;
+  height: 35px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  .toggleButton img {
+    margin-top: 5px;
+    width: 20%; }
+    @media (min-width: 620px) {
+      .toggleButton img {
+        width: 10%; } }
+
+.ellipsisButton, .flipButton {
+  width: 40%; }
+
+.animatedDots {
+  font-size: 8rem;
+  margin-top: -55px;
+  display: inline-block; }
+
+.animatedDots:hover {
+  width: 0;
+  margin-left: 0.1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-animation: animateDots 1s ease alternate infinite;
+          animation: animateDots 1s ease alternate infinite; }
+
+@-webkit-keyframes animateDots {
+  from {
+    width: 0; }
+  to {
+    width: 1em; } }
+
+@keyframes animateDots {
+  from {
+    width: 0; }
+  to {
+    width: 1em; } }
+
+@-webkit-keyframes ellipsisButton {
+  60% {
+    text-shadow: 0.35em 0 0 currentColor; }
+  100% {
+    text-shadow: 0.35em 0 0 currentColor, 0.75em 0 0 currentColor; } }
+
+@keyframes ellipsisButton {
+  60% {
+    text-shadow: 0.35em 0 0 currentColor; }
+  100% {
+    text-shadow: 0.35em 0 0 currentColor, 0.75em 0 0 currentColor; } }
+
+.flipButton:hover img {
+  -webkit-animation: flipButton infinite 4s linear;
+          animation: flipButton infinite 4s linear; }
+
+@-webkit-keyframes flipButton {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes flipButton {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+.transition {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg); }
+
+img {
+  width: 30%; }
+
+form {
+  text-align: center; }
+  form input {
+    margin: 0 auto;
+    text-align: right;
+    width: 80%; }
+  form button {
+    width: 25%; }
+
+button:hover {
+  background-color: white;
+  -webkit-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s; }
+
+.clearButton, .operatorButton {
+  background-color: darkgrey;
+  -webkit-transition: background-color 0.5;
+  -o-transition: background-color 0.5;
+  transition: background-color 0.5; }
+
+.operatorButton:hover {
+  background-color: steelblue; }
+
+.clearButton:hover {
+  background-color: orange; }
+
+.equation {
+  border-bottom: none; }
+
+.value {
+  border-top: none; }
+
+.buttonsContainer {
+  width: 80%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  margin: 0 auto; }
+
+.relative {
+  position: relative; }
+
+.history {
+  position: absolute;
+  height: 69%;
+  width: 90%;
+  top: 38px;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  overflow: hidden;
+  overflow-y: scroll; }
+  @media (min-width: 620px) {
+    .history {
+      margin-left: 24px;
+      width: 86%; } }
+
+.hide {
+  display: none; }
+
+ul {
+  list-style: none;
+  text-align: left; }
+  ul li {
+    padding: 5px 0px 0px 2px; }
+    @media (min-width: 620px) {
+      ul li {
+        padding: 10px 0px 0 10px; } }
+</style><script type="text/javascript" charset="utf-8" src="./React App_files/0.6f90ade7217e6b212f71.hot-update.js.download"></script><script type="text/javascript" charset="utf-8" src="./React App_files/0.439f3463e1b78d405f93.hot-update.js.download"></script><script type="text/javascript" charset="utf-8" src="./React App_files/0.41cec8d48092132f0c56.hot-update.js.download"></script><link rel="stylesheet" type="text/css" href="chrome-extension://bblbgcheenepgnnajgfpiicnbbdmmooh/pesticide.min.css" id="pesticideCSS"><script type="text/javascript" src="chrome-extension://bblbgcheenepgnnajgfpiicnbbdmmooh/pesticide.js" id="pesticideJS"></script><script type="text/javascript" charset="utf-8" src="./React App_files/0.234728cc13d6747a95cb.hot-update.js.download"></script><script type="text/javascript" charset="utf-8" src="./React App_files/0.bf9bdd1f9b13aca7143c.hot-update.js.download"></script></head>
+  <body data-gr-c-s-loaded="true">
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"><div class="App wrapper  "><h1 class="title">Calculator</h1><div class=""><form><input row="2" placeholder="12" class="equation"><input type="text" placeholder="" class="value"><div class="buttonsContainer"><button class="blankButton"></button><button class="blankButton"></button><button class="blankButton"></button><button class="clearButton" value="clear">ce</button></div><div class="buttonsContainer"><button value="7">7</button><button value="8">8</button><button value="9">9</button><button class="operatorButton" value="/">/</button></div><div class="buttonsContainer"><button value="4">4</button><button value="5">5</button><button value="6">6</button><button class="operatorButton" value="*">x</button></div><div class="buttonsContainer"><button value="1">1</button><button value="2">2</button><button value="3">3</button><button class="operatorButton" value="-">-</button></div><div class="buttonsContainer"><button value="0">0</button><button value=".">.</button><button type="submit" value="=">=</button><button class="operatorButton" value="+">+</button></div></form></div><div class="toggleButton"><button class="ellipsisButton"><span class="animatedDots">...</span></button><button class="flipButton"><img src="./React App_files/syncAltSolid.8ab1efc9.svg" alt=""></button></div><div><ul class="hide"><li>258/6 = 43</li><li>88 = 88</li><li>88 = 88</li><li>88 = 88</li><li>3*3 = 9</li><li>85+2 = 87</li><li>5*5 = 25</li><li>8/8 = 1</li><li>9/9*5+3 = 8</li><li>2*2 = 4</li></ul></div></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script type="text/javascript" src="./React App_files/bundle.js.download"></script>
+
+<div id="pesticide-for-chrome-result" class=""><p>You're hovering on = { node: <b> button</b>; classes: <b> operatorButton</b>; id: <b> </b>; }</p></div></body></html>

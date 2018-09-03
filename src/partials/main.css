@@ -134,12 +134,25 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 html {
   font-size: 62.5%; }
 
-button, input, ul {
+button, input, ul, h1 {
   font-family: "Marvel", sans-serif;
   font-size: 2rem; }
 
+h1 {
+  font-size: 3.5rem;
+  font-weight: bold; }
+
 button {
   font-weight: bold; }
+
+header {
+  background-image: url(./../operators.JPG);
+  background-repeat: repeat;
+  height: 100vh;
+  background-repeat: repeat;
+  background-color: whitesmoke;
+  padding: 1px;
+  position: relative; }
 
 .wrapper {
   width: 300px;
@@ -147,6 +160,15 @@ button {
   @media (min-width: 620px) {
     .wrapper {
       width: 600px; } }
+
+.title {
+  margin: 45px auto;
+  margin-bottom: 10px;
+  text-align: center;
+  background-color: rgba(70, 130, 180, 0.9);
+  width: 60%;
+  height: 45px;
+  text-transform: uppercase; }
 
 .toggleButton {
   margin: 0 auto;
@@ -163,6 +185,15 @@ button {
 .ellipsisButton, .flipButton {
   width: 40%; }
 
+.flipButton:hover img {
+  animation: flipButton infinite 4s linear; }
+
+@keyframes flipButton {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
 .transition {
   transform: rotate(180deg); }
 
@@ -170,20 +201,28 @@ img {
   width: 30%; }
 
 form {
-  margin-top: 50px;
   text-align: center; }
   form input {
     margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
     text-align: right;
     width: 80%; }
   form button {
     width: 25%; }
 
 button:hover {
-  background-color: white; }
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: background-color 0.5s; }
 
-.clearButton, .operatorButton {
-  background-color: darkgrey; }
+.clearButton {
+  background-color: orange; }
+
+.operatorButton {
+  background-color: steelblue;
+  transition: background-color 0.5; }
+
+.operatorButton:hover, .clearButton:hover {
+  background-color: darkgray; }
 
 .equation {
   border-bottom: none; }
@@ -202,9 +241,9 @@ button:hover {
 
 .history {
   position: absolute;
-  height: 85%;
+  height: 37%;
   width: 90%;
-  top: -20px;
+  top: 82px;
   left: 0;
   background-color: rgba(255, 255, 255, 0.9);
   overflow: hidden;

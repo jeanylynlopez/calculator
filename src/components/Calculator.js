@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import flip from './../syncAltSolid.svg';
 import ellipsis from './../ellipsisHSolid.svg';
-import firebase from "./../firebase";
+import firebase from "./../firebase"; 
+// import './../partials/main.css';
 
 //*****
 // figure out the buttons to turn the calculator around and to show the history 
