@@ -6,11 +6,6 @@
 // APP
 // ===============
 
-// .wrapper {
-//     margin: 0 auto;
-//     max-width: 1300px;
-// }
-
 .wrapper {
     max-width: 350px;
     margin: 0 auto;
@@ -20,25 +15,18 @@
 }
 
 header {
-    // background-image: url(./../);
     background-image: url(./../calcBackground.jpg);
     background-repeat: no-repeat;
     height: 100vh;
-    // height: 100%;
-    // width: 100vh;
     background-size: cover;
     background-position: center;
     background-repeat: repeat;
     background-color: whitesmoke;
     padding: 1px;
     position: relative;
-    // width: 100%;
 }
 
-
-
 .title {
-    // text-align: center;
     margin: 45px auto;
     margin-bottom: 10px;
     text-align: center;
@@ -46,14 +34,10 @@ header {
     width: 60%;
     height: 45px;
     text-transform: uppercase;
-    // line-height: 0;
-    // margin-top: 25px 0 5px 0;
-    
 }
 
 .toggleButton {
     margin: 0 auto;
-    // width: 50%;
     height: 35px;
     display: flex;
     justify-content: center;
@@ -75,7 +59,6 @@ header {
 //   font-size: 8rem; 
 //   vertical-align:text-bottom;
 //   font-weight: bold;
-
 // }
 
 // .animatedDots img {
@@ -136,14 +119,12 @@ header {
   to { transform: rotate(360deg); }
 }
 
-
 // ===============
 // CALCULATOR
 // ===============
 
 .transition {
     transform: rotate(180deg);
-    // margin-top: 25px;  
 }
 
 img {
@@ -151,21 +132,15 @@ img {
 }
 
 form {
-    // margin-top: -20px;
     text-align: center;
     input {
         margin: 0 auto;
         background-color: rgba(255, 255, 255, 0.9);
-        // margin-top: -10px;
-        // height: 50px;
         text-align: right;
-        // margin-top: 25px; 
         width: 80%;
     }
     button {
         width: 25%;
-        // border-radius: 7px;
-        // margin: 1px;
     }
 }
 
@@ -216,15 +191,9 @@ button:hover {
     width: 80%;
     top: 12%;
     left: 10%;
-    // top: 35px;
-    // left: 29px;
     background-color: rgba(255, 255, 255, 0.9);
     overflow: hidden;
     overflow-y: scroll;
-    @include breakPoint(medium){
-        // margin-left: 30px;
-        // width: 80%;
-    }
 }
 
 .hide {
