@@ -6,27 +6,36 @@
 // APP
 // ===============
 
+// .wrapper {
+//     margin: 0 auto;
+//     max-width: 1300px;
+// }
+
+.wrapper {
+    max-width: 350px;
+    margin: 0 auto;
+    @include breakPoint(medium){
+        max-width: 600px;
+    }   
+}
+
 header {
-    background-image: url(./../operators.JPG);
-    // background-image: url(./../schoolBackground.jpg);
-    background-repeat: repeat;
+    // background-image: url(./../);
+    background-image: url(./../calcBackground.jpg);
+    background-repeat: no-repeat;
     height: 100vh;
+    // height: 100%;
     // width: 100vh;
-    // background-size: cover;
-    // background-position: center;
+    background-size: cover;
+    background-position: center;
     background-repeat: repeat;
     background-color: whitesmoke;
     padding: 1px;
     position: relative;
+    // width: 100%;
 }
 
-.wrapper {
-    width: 300px;
-    margin: 0 auto;
-    @include breakPoint(medium){
-        width: 600px;
-    }   
-}
+
 
 .title {
     // text-align: center;
@@ -203,16 +212,18 @@ button:hover {
 
 .history {
     position: absolute;
-    height: 37%;
-    width: 90%;
-    top: 82px;
-    left: 0;
+    height: 70%;
+    width: 80%;
+    top: 12%;
+    left: 10%;
+    // top: 35px;
+    // left: 29px;
     background-color: rgba(255, 255, 255, 0.9);
     overflow: hidden;
     overflow-y: scroll;
     @include breakPoint(medium){
-        margin-left: 24px;
-        width: 86%;
+        // margin-left: 30px;
+        // width: 80%;
     }
 }
 
@@ -224,9 +235,10 @@ ul {
     list-style: none;
     text-align: left;
     li {
-        padding: 5px 0px 0px 2px;
+        padding: 5px 0px 5px 2px;
+        margin-left: -25px;
         @include breakPoint(medium){
-            padding: 10px 0px 0 10px;
+            padding: 5px 0px 5px 10px;
         }
     }
 }

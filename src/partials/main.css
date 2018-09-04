@@ -145,21 +145,23 @@ h1 {
 button {
   font-weight: bold; }
 
+.wrapper {
+  max-width: 350px;
+  margin: 0 auto; }
+  @media (min-width: 620px) {
+    .wrapper {
+      max-width: 600px; } }
+
 header {
-  background-image: url(./../operators.JPG);
-  background-repeat: repeat;
+  background-image: url(./../calcBackground.jpg);
+  background-repeat: no-repeat;
   height: 100vh;
+  background-size: cover;
+  background-position: center;
   background-repeat: repeat;
   background-color: whitesmoke;
   padding: 1px;
   position: relative; }
-
-.wrapper {
-  width: 300px;
-  margin: 0 auto; }
-  @media (min-width: 620px) {
-    .wrapper {
-      width: 600px; } }
 
 .title {
   margin: 45px auto;
@@ -241,17 +243,13 @@ button:hover {
 
 .history {
   position: absolute;
-  height: 37%;
-  width: 90%;
-  top: 82px;
-  left: 0;
+  height: 70%;
+  width: 80%;
+  top: 12%;
+  left: 10%;
   background-color: rgba(255, 255, 255, 0.9);
   overflow: hidden;
   overflow-y: scroll; }
-  @media (min-width: 620px) {
-    .history {
-      margin-left: 24px;
-      width: 86%; } }
 
 .hide {
   display: none; }
@@ -260,7 +258,8 @@ ul {
   list-style: none;
   text-align: left; }
   ul li {
-    padding: 5px 0px 0px 2px; }
+    padding: 5px 0px 5px 2px;
+    margin-left: -25px; }
     @media (min-width: 620px) {
       ul li {
-        padding: 10px 0px 0 10px; } }
+        padding: 5px 0px 5px 10px; } }

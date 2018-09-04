@@ -74,8 +74,8 @@ class App extends Component {
 
   render() {
     return (
-      <div className={`App wrapper ${this.state.relativeClass} `}>
         <header>
+      <div className={`App wrapper ${this.state.relativeClass} `}>
         <h1 className="title">Calculator</h1>
         <Calculator flipClass={this.state.flipClass}/> 
         <div className="toggleButton">
@@ -87,8 +87,8 @@ class App extends Component {
           <button onClick={this.toggleFlip} className="flipButton"><img src={flip} alt="" /></button>
         </div>
         <History fullEquation={this.state.equation} historyClass={this.state.historyClass} />
-        </header>
       </div>
+        </header>
     );
   }
 }
